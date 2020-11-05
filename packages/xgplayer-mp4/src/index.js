@@ -16,6 +16,7 @@ let isEnded = (player, mp4) => {
 }
 
 let mp4player = function () {
+  console.log('mp4player called')
   let player = this; let sniffer = Player.sniffer; let util = Player.util
   let Errors = Player.Errors; let mainURL; let backupURL
   let preloadTime = player.config.preloadTime || 15

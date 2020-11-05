@@ -13,6 +13,7 @@ import {
 } from '../version.json'
 class Player extends Proxy {
   constructor (options) {
+    console.log('Player creating')
     super(options)
     this.config = util.deepCopy({
       width: 600,
@@ -181,6 +182,7 @@ class Player extends Proxy {
       player.off('destroy', onDestroy)
     }
     player.once('destroy', onDestroy)
+    console.log('Player created')
   }
 
   start (url = this.config.url) {
